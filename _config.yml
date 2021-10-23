@@ -1,7 +1,3 @@
-# General
-title: 'Natron'
-description: 'Open Source Compositing Software For VFX and Motion Graphics'
-
 # Natron
 natron:
   branch: 2.4
@@ -21,6 +17,48 @@ natron:
       v1015: '-macOS1015-x86_64.dmg'
       v109: '-OSX109-x86_64.dmg'
       v106: '-OSX-Universal.dmg'
+
+# General
+title: 'Natron'
+description: 'Open Source Compositing Software For VFX and Motion Graphics'
+
+# Home
+home:
+  hero:
+    image: 'img/natron-baymax-screenshot.png'
+    title: 'Visual Effects Without Limits.'
+    description: 'Node-based compositing, backed by the freedom of open-source.'
+    button:
+      title: 'Download Natron'
+      url: '#download'
+  features:
+    title: 'The tools youʼd expect to be here'
+    description: 'The standard 2D compositing toolkit you already know and love.'
+    items:
+      openfx:
+        image: 'img/index-feature-cards/openfx.svg'
+        title: 'OpenFX Plugin Support'
+        description: 'Natron supports industry-standard OFX plug-ins.'
+      tracking:
+        image: 'img/index-feature-cards/tracking.svg'
+        title: '2D Tracking'
+        description: 'Natron includes a fast, pixel-perfect 2D tracker.'
+      roto:
+        image: 'img/index-feature-cards/roto.svg'
+        title: 'Roto'
+        description: 'Multi-layered rotoscoping with per-vertex feathering.'
+      keyer:
+        image: 'img/index-feature-cards/keyer.svg'
+        title: 'Keying'
+        description: 'Natron offers various keying and matte refinement tools.'
+      dopesheet:
+        image: 'img/index-feature-cards/dopesheet.svg'
+        title: 'Curve & Dope-sheet Editors'
+        description: "If you've used a curve editor before you know how to use this one too."
+      rendering:
+        image: 'img/index-feature-cards/gpu.svg'
+        title: 'GPU & Network Rendering'
+        description: 'Natron is GPU accelerated and can be integrated with render farm managers.'
 
 # Guide
 guide:
