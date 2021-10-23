@@ -11,6 +11,8 @@ natron:
 
 # Downloads
 downloads:
+  title: 'Download Natron'
+  description: 'Latest version:'
   items:
     windows:
       title: 'Windows'
@@ -73,6 +75,7 @@ home:
     button:
       title: 'Download Natron'
       url: '#download'
+      icon: 'bxs-download'
   features:
     title: 'The tools youʼd expect to be here'
     description: 'The standard 2D compositing toolkit you already know and love.'
@@ -101,6 +104,17 @@ home:
         image: 'img/index-feature-cards/gpu.svg'
         title: 'GPU & Network Rendering'
         description: 'Natron is GPU accelerated and can be integrated with render farm managers.'
+  aboutnodes:
+    image:
+      url: 'img/natron-screenshot.png'
+      alt: "A flatscreen monitor displaying Natron's interface"
+    title: 'Work smarter with nodes'
+    description:
+      items:
+        paragraph1:
+          content: 'No more frustrating hunts through nested precomps! Fusion and Nuke users will be right at home in Natron’s node graph. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, cleanplates, and set extensions, all with node trees.'
+        paragraph2:
+          content: 'Build, group, and save your own nodes to create custom tools and presets. Natron features drag-and-drop installation of <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">community-made “pyplug” nodes.</a>'
 
 # Guide
 guide:

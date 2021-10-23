@@ -8,7 +8,7 @@ title: Natron
       <h1 class="h1 large-dropshadow-text">{{site.home.hero.title}}</h1>
       <p class="hero-subheader large-dropshadow-text">{{site.home.hero.description}}</p>
       <div>
-        <a class="button large-dropshadow" href="{{site.home.hero.button.url}}"><i class='bx bxs-download'></i>{{site.home.hero.button.title}}</a>
+        <a class="button large-dropshadow" href="{{site.home.hero.button.url}}"><i class='bx {{site.home.hero.button.icon}}'></i>{{site.home.hero.button.title}}</a>
       </div>
     </div>
   </div>
@@ -17,9 +17,7 @@ title: Natron
   <div class="section-container">
     <div class="index-features-titlecontainer">
       <h2 class="h2 center-text">{{site.home.features.title}}</h2>
-      <p class="p-body center-text">
-        {{site.home.features.description}}
-      </p>
+      <p class="p-body center-text">{{site.home.features.description}}</p>
     </div>
     <div class="index-features">
       <ul>
@@ -42,19 +40,14 @@ title: Natron
   <div class="section-container">
     <div class="index-aboutnodes">
       <div class="index-aboutnodes-imagecontainer">
-        <img src="{{base}}img/natron-screenshot.png" alt="A flatscreen monitor displaying Natron's interface">
+        <img src="{{base}}{{site.home.aboutnodes.image.url}}" alt="{{site.home.aboutnodes.image.alt}}">
       </div>
       <div class="index-aboutnodes-textcontainer">
         <div>
-          <h2 class="h2">Work smarter with nodes</h2>
-          <p class="p-body">
-            No more frustrating hunts through nested precomps! Fusion and Nuke users will be right at home in Natron’s node graph. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, cleanplates, and set
-            extensions, all with node trees.
-            <br />
-            <br />
-            Build, group, and save your own nodes to create custom tools and presets. Natron features drag-and-drop installation of <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">community-made “pyplug”
-              nodes.</a>
-          </p>
+          <h2 class="h2">{{site.home.aboutnodes.title}}</h2>
+          {% for p in site.home.aboutnodes.description.items %}
+          <p class="p-body">{{p[1].content}}</p>
+          {% endfor %}
         </div>
       </div>
     </div>
@@ -63,9 +56,9 @@ title: Natron
 <section class="stdsection" id="download">
   <div class="section-container">
     <div class="index-downloads-titlecontainer">
-      <h2 class="h2 center-text">Download Natron</h2>
+      <h2 class="h2 center-text">{{site.downloads.title}}</h2>
       <p class="p-body center-text">
-        Latest version: <a href="{{site.natron.release.url.base}}{{site.natron.release.url.tag}}{{site.natron.release.version}}" target="_blank" class="intext-link intext-link-glow">{{site.natron.release.version}}</a> ({{site.natron.release.date}})
+        {{site.downloads.description}} <a href="{{site.natron.release.url.base}}{{site.natron.release.url.tag}}{{site.natron.release.version}}" target="_blank" class="intext-link intext-link-glow">{{site.natron.release.version}}</a> ({{site.natron.release.date}})
       </p>
     </div>
     <div class="index-downloads-oscontainer">
@@ -80,13 +73,9 @@ title: Natron
         <div class="index-downloads-os-links">
           {% for version in os[1].versions %}
           {% if version[1].suffix == '' %}
-          <a href="{{version[1].url}}" target="_blank" class="p-small intext-link intext-link-glow">
-            {{version[1].title}}
-          </a>
+          <a href="{{version[1].url}}" target="_blank" class="p-small intext-link intext-link-glow">{{version[1].title}}</a>
           {% else %}
-          <a href="{{site.natron.release.url.base}}{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{version[1].suffix}}" class="p-small intext-link intext-link-glow">
-            {{version[1].title}}
-          </a>
+          <a href="{{site.natron.release.url.base}}{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{version[1].suffix}}" class="p-small intext-link intext-link-glow">{{version[1].title}}</a>
           {% endif %}
           {% endfor %}
         </div>
