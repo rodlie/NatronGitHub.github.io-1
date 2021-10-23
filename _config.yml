@@ -73,6 +73,26 @@ downloads:
           url: ''
           suffix: '-OSX-Universal.dmg'
 
+# Addons
+addons:
+  title: 'Add-ons'
+  description: 'Additional plug-ins and scripts for Natron.'
+  icon: 'bx-package'
+  url: 'https://github.com/NatronGitHub/'
+  items:
+    natron_plugins:
+      title: 'Natron Community plug-ins'
+      url: 'natron-plugins'
+    natron_scripts:
+      title: 'Natron Community scripts'
+      url: 'natron-python-scripting'
+    openfx_braw:
+      title: 'Blackmagic RAW plug-in'
+      url: 'openfx-braw'
+    openfx_community:
+      title: 'OpenFX Community plug-ins'
+      url: 'openfx-community'
+
 # Sources
 sourcecode:
   title: 'Sources'
