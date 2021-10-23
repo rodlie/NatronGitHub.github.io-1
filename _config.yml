@@ -1,28 +1,44 @@
 # General
-title: "Natron"
-description: Open Source Compositing Software For VFX and Motion Graphics
+title: 'Natron'
+description: 'Open Source Compositing Software For VFX and Motion Graphics'
 
-# External
-# twitter: https://twitter.com/natronvfx (unmaintained)
-discord: https://discord.gg/cpMj5p3Fv5
-forum: https://discuss.pixls.us/c/software/natron
-github: https://github.com/NatronGitHub/Natron
-facebook: https://facebook.com/groups/NatronNation
-docs: https://natron.readthedocs.io
-demos: https://sourceforge.net/projects/natron/files/Examples
+# Natron
+natron:
+  branch: 2.4
+  release:
+    version: 2.4.0
+    date: '2021-04-20'
+    url:
+      tag: 'https://github.com/NatronGitHub/Natron/releases/tag/v'
+      download: 'https://github.com/NatronGitHub/Natron/releases/download/v'
+    linux:
+      installer: 'Natron-__RELEASE__-Linux-x86_64.tgz'
+      portable: 'Natron-__RELEASE__-Linux-x86_64-no-installer.tar.xz'
+      flatpak: 'https://flathub.org/apps/details/fr.natron.Natron'
+    windows: 'Natron-__RELEASE__-Windows-x86_64.zip'
+    macos:
+      v11: 'Natron-__RELEASE__-macOS11-x86_64.dmg'
+      v1015: 'Natron-__RELEASE__-macOS1015-x86_64.dmg'
+      v109: 'Natron-__RELEASE__-OSX109-x86_64.dmg'
+      v106: 'Natron-__RELEASE__-OSX-Universal.dmg'
 
 # Guide
 guide:
   intro: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/intro.html'
   getting_started: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/getstarted.html'
   compositing: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/compositing.html'
-  tutorials: https://natron.readthedocs.io/en/rb-__BRANCH__/guide/tutorials.html
+  tutorials: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/tutorials.html'
   reference: 'https://natron.readthedocs.io/en/rb-__BRANCH__/_group.html'
   developer: 'https://natron.readthedocs.io/en/rb-__BRANCH__/devel/index.html'
 
-# Natron
-natron:
-  branch: 2.4
+# External
+# twitter: https://twitter.com/natronvfx (unmaintained)
+discord: 'https://discord.gg/cpMj5p3Fv5'
+forum: 'https://discuss.pixls.us/c/software/natron'
+github: 'https://github.com/NatronGitHub/Natron'
+facebook: 'https://facebook.com/groups/NatronNation'
+docs: 'https://natron.readthedocs.io'
+demos: 'https://sourceforge.net/projects/natron/files/Examples'
 
 # Build settings
 sass:
