@@ -57,9 +57,7 @@ title: Natron
   <div class="section-container">
     <div class="index-downloads-titlecontainer">
       <h2 class="h2 center-text">{{site.downloads.title}}</h2>
-      <p class="p-body center-text">
-        {{site.downloads.description}} <a href="{{site.natron.release.url.base}}{{site.natron.release.url.tag}}{{site.natron.release.version}}" target="_blank" class="intext-link intext-link-glow">{{site.natron.release.version}}</a> ({{site.natron.release.date}})
-      </p>
+      <p class="p-body center-text">{{site.downloads.description}} <a href="{{site.natron.release.url.base}}{{site.natron.release.url.tag}}{{site.natron.release.version}}" target="_blank" class="intext-link intext-link-glow">{{site.natron.release.version}}</a> ({{site.natron.release.date}})</p>
     </div>
     <div class="index-downloads-oscontainer">
       {% for os in site.downloads.items %}
@@ -87,69 +85,22 @@ title: Natron
 <section class="stdsection" id="community">
   <div class="section-container">
     <div class="index-community-titlecontainer">
-      <h2 class="h2 center-text">Join the community!</h2>
+      <h2 class="h2 center-text">{{site.community.title.home}}</h2>
     </div>
     <div class="index-community-cardgrid">
-      <div class="index-community-cardcontainer">
-        <a href="{{site.github}}" target="_blank" class="index-card">
-          <div class="index-card-icon">
-            <i class='bx bxl-github'></i>
+    {% for item in site.community.items %}
+    <div class="index-community-cardcontainer">
+      <a href="{{item[1].url}}" target="_blank" class="index-card">
+        <div class="index-card-icon"><i class='bx {{item[1].icon}}'></i></div>
+        <div class="index-card-text">
+          <div>
+            <h4 class="h4">{{item[1].title}}</h4>
+            <p class="p-small">{{item[1].description}}</p>
           </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Contribute on GitHub</h4>
-              <p class="p-small">
-                Source code, bug reports, and build guides for developers!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="index-community-cardcontainer">
-        <a href="{{site.forum}}" target="_blank" class="index-card">
-          <div class="index-card-icon">
-            <i class='bx bxl-discourse'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Discuss on the forum</h4>
-              <p class="p-small">
-                The official place for questions and discussion about Natron!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="index-community-cardcontainer">
-        <a href="{{site.facebook}}" target="_blank" class="index-card">
-          <div class="index-card-icon">
-            <i class='bx bxl-facebook-circle'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Find us on Facebook</h4>
-              <p class="p-small">
-                Join the Natron Nation group on Facebook!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="index-community-cardcontainer">
-        <a href="{{site.discord}}" target="_blank" class="index-card">
-          <div class="index-card-icon">
-            <i class='bx bxl-discord'></i>
-          </div>
-          <div class="index-card-text">
-            <div>
-              <h4 class="h4">Join us on Discord</h4>
-              <p class="p-small">
-                If you prefer text chat, check out the Discord server!
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
     </div>
   </div>
 </section>

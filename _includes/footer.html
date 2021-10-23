@@ -57,21 +57,14 @@
         </ul>
       </div>
       <div class="footer-communitycontainer">
-        <h4 class="h4">Community</h4>
-        <p class="p-small">Follow us on social media for the latest on Natron!</p>
+        <h4 class="h4">{{site.community.title.footer}}</h4>
+        <p class="p-small">{{site.community.description.footer}}</p>
         <div>
-          <a title="GitHub" href="{{site.github}}">
-            <i class='bx bxl-github'></i>
+          {% for item in site.community.items %}
+          <a title="{{item[1].title}}" href="{{item[1].url}}" target="_blank">
+            <i class='bx {{item[1].icon}}'></i>
           </a>
-          <a title="Forum" href="{{site.forum}}">
-            <i class='bx bxl-discourse'></i>
-          </a>
-          <a title="Twitter" href="{{site.facebook}}">
-            <i class='bx bxl-facebook'></i>
-          </a>
-          <a title="Discord" href="{{site.discord}}">
-            <i class='bx bxl-discord'></i>
-          </a>
+          {% endfor %}
         </div>
       </div>
     </div>

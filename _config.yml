@@ -65,6 +65,8 @@ downloads:
 # General
 title: 'Natron'
 description: 'Open Source Compositing Software For VFX and Motion Graphics'
+docs: 'https://natron.readthedocs.io'
+demos: 'https://sourceforge.net/projects/natron/files/Examples'
 
 # Home
 home:
@@ -114,7 +116,7 @@ home:
         paragraph1:
           content: 'No more frustrating hunts through nested precomps! Fusion and Nuke users will be right at home in Natron’s node graph. Group, merge, and tinker to achieve just about any effect. Create pixel perfect mattes, cleanplates, and set extensions, all with node trees.'
         paragraph2:
-          content: 'Build, group, and save your own nodes to create custom tools and presets. Natron features drag-and-drop installation of <a href="https://github.com/NatronGitHub/natron-plugins" class="intext-link intext-link-glow">community-made “pyplug” nodes.</a>'
+          content: 'Build, group, and save your own nodes to create custom tools and presets. Or install from our large selection of community-made <a href="https://github.com/NatronGitHub/natron-plugins" target="_blank" class="intext-link intext-link-glow">“pyplug”</a> nodes.'
 
 # Guide
 guide:
@@ -125,21 +127,43 @@ guide:
   reference: '_group.html'
   developer: 'devel/index.html'
 
-# External
+# Community
 # twitter: https://twitter.com/natronvfx (unmaintained)
-discord: 'https://discord.gg/cpMj5p3Fv5'
-forum: 'https://discuss.pixls.us/c/software/natron'
-github: 'https://github.com/NatronGitHub/Natron'
-facebook: 'https://facebook.com/groups/NatronNation'
-docs: 'https://natron.readthedocs.io'
-demos: 'https://sourceforge.net/projects/natron/files/Examples'
+community:
+  title:
+    home: 'Join the community!'
+    footer: 'Community'
+  description:
+    home: ''
+    footer: 'Follow us on social media for the latest on Natron!'
+  items:
+    github:
+      icon: 'bxl-github'
+      title: 'Contribute on GitHub'
+      description: 'Source code, bug reports, and build guides for developers!'
+      url: 'https://github.com/NatronGitHub/Natron'
+    pixls:
+      icon: 'bxl-discourse'
+      title: 'Discuss on the forum'
+      description: 'The official place for questions and discussion about Natron!'
+      url: 'https://discuss.pixls.us/c/software/natron'
+    facebook:
+      icon: 'bxl-facebook-circle'
+      title: 'Find us on Facebook'
+      description: 'Join the Natron Nation group on Facebook!'
+      url: 'https://facebook.com/groups/NatronNation'
+    discord:
+      icon: 'bxl-discord'
+      title: 'Join us on Discord'
+      description: 'If you prefer text chat, check out the Discord server!'
+      url: 'https://discord.gg/cpMj5p3Fv5'
 
 # Build settings
 sass:
   style: compressed
 markdown: kramdown
 kramdown:
-  auto_ids: "true"
+  auto_ids: true
   input: GFM
   syntax_highlighter_opts:
     default_lang: python
