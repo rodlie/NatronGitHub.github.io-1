@@ -12,24 +12,24 @@ natron:
       tag: 'https://github.com/NatronGitHub/Natron/releases/tag/v'
       download: 'https://github.com/NatronGitHub/Natron/releases/download/v'
     linux:
-      installer: 'Natron-__RELEASE__-Linux-x86_64.tgz'
-      portable: 'Natron-__RELEASE__-Linux-x86_64-no-installer.tar.xz'
+      installer: '-Linux-x86_64.tgz'
+      portable: '-Linux-x86_64-no-installer.tar.xz'
       flatpak: 'https://flathub.org/apps/details/fr.natron.Natron'
-    windows: 'Natron-__RELEASE__-Windows-x86_64.zip'
+    windows: '-Windows-x86_64.zip'
     macos:
-      v11: 'Natron-__RELEASE__-macOS11-x86_64.dmg'
-      v1015: 'Natron-__RELEASE__-macOS1015-x86_64.dmg'
-      v109: 'Natron-__RELEASE__-OSX109-x86_64.dmg'
-      v106: 'Natron-__RELEASE__-OSX-Universal.dmg'
+      v11: '-macOS11-x86_64.dmg'
+      v1015: '-macOS1015-x86_64.dmg'
+      v109: '-OSX109-x86_64.dmg'
+      v106: '-OSX-Universal.dmg'
 
 # Guide
 guide:
-  intro: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/intro.html'
-  getting_started: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/getstarted.html'
-  compositing: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/compositing.html'
-  tutorials: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/tutorials.html'
-  reference: 'https://natron.readthedocs.io/en/rb-__BRANCH__/_group.html'
-  developer: 'https://natron.readthedocs.io/en/rb-__BRANCH__/devel/index.html'
+  intro: 'guide/intro.html'
+  getting_started: 'guide/getstarted.html'
+  compositing: 'guide/compositing.html'
+  tutorials: 'guide/tutorials.html'
+  reference: '_group.html'
+  developer: 'devel/index.html'
 
 # External
 # twitter: https://twitter.com/natronvfx (unmaintained)
