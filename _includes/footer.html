@@ -8,52 +8,27 @@
     </div>
     <div class="footer-linkscontainer">
       <nav aria-label="main">
-        <h4 class="h4">Explore</h4>
+        <h4 class="h4">{{site.explore.title}}</h4>
         <ul class="footer-links-list">
+          {% for item in site.explore.items %}
+          {% if item[1].footer == true %}
           <li>
-            <a href="{{base}}">Home</a>
+            {% if item[1].url.external == true %}
+            <a href="{{item[1].url.link}}" target="_blank">{{item[1].title}}</a>
+            {% else %}
+            <a href="{{base}}{{item[1].url.link}}">{{item[1].title}}</a>
+            {% endif %}
           </li>
-          <li>
-            <a href="{{base}}/#download">Downloads</a>
-          </li>
-          <li>
-            <a href="{{base}}/news">News</a>
-          </li>
-          <li>
-            <a href="{{base}}/#features">Features</a>
-          </li>
-          <li>
-            <a href="{{base}}/#community">Community</a>
-          </li>
-          <li>
-            <a href="{{site.docs}}" target="_blank">Documentation</a>
-          </li>
+          {% endif %}
+          {% endfor %}
         </ul>
       </nav>
       <div class="footer-tutorialcontainer">
-        <h4 class="h4">Learn</h4>
+        <h4 class="h4">{{site.learn.title}}</h4>
         <ul class="footer-links-list">
-          <li>
-            <a href="{{site.docs}}/en/rb-{{site.natron.branch}}/{{site.guide.intro}}" target="_blank">What is compositing?</a>
-          </li>
-          <li>
-            <a href="{{site.docs}}/en/rb-{{site.natron.branch}}/{{site.guide.getting_started}}" target="_blank">Getting Started</a>
-          </li>
-          <li>
-            <a href="{{site.docs}}/en/rb-{{site.natron.branch}}/{{site.guide.compositing}}" target="_blank">Compositing</a>
-          </li>
-          <li>
-            <a href="{{site.docs}}/en/rb-{{site.natron.branch}}/{{site.guide.tutorials}}" target="_blank">Tutorials</a>
-          </li>
-          <li>
-            <a href="{{site.docs}}/en/rb-{{site.natron.branch}}/{{site.guide.reference}}" target="_blank">Reference Guide</a>
-          </li>
-          <li>
-            <a href="{{site.docs}}/en/rb-{{site.natron.branch}}/{{site.guide.developer}}" target="_blank">Developers Guide</a>
-          </li>
-          <li>
-            <a href="{{site.demos}}" target="_blank">Demo/Example Files</a>
-          </li>
+          {% for item in site.learn.items %}
+          <li><a href="{{site.learn.url}}/en/rb-{{site.natron.branch}}/{{item[1].url}}" target="_blank">{{item[1].title}}</a></li>
+          {% endfor %}
         </ul>
       </div>
       <div class="footer-communitycontainer">

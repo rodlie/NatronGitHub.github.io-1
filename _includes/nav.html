@@ -11,21 +11,17 @@
       </a>
     </div>
     <ul class="nav-menulist">
-      <!-- <li>
-        <a href="{{base}}/#download">Downloads</a>
-      </li> -->
+      {% for item in site.explore.items %}
+      {% if item[1].header == true %}
       <li>
-        <a href="{{base}}/news">News</a>
+        {% if item[1].url.external == true %}
+        <a href="{{item[1].url.link}}" target="_blank">{{item[1].title}}</a>
+        {% else %}
+        <a href="{{base}}{{item[1].url.link}}">{{item[1].title}}</a>
+        {% endif %}
       </li>
-      <li>
-        <a href="{{base}}/#features">Features</a>
-      </li>
-      <li>
-        <a href="{{base}}/#community">Community</a>
-      </li>
-      <li>
-        <a href="{{site.docs}}" target="_blank">Documentation</a>
-      </li>
+      {% endif %}
+      {% endfor %}
     </ul>
   </div>
 </nav>

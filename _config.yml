@@ -1,4 +1,9 @@
 # Natron
+#
+# Update 'branch', 'version' and 'date' on new release
+# also make a new post in '_posts' named 'YYYY-MM-DD-Natron-X.Y.Z.md' (just copy the content of the GitHub release notes)
+# and update 'LATEST_VERSION.txt'
+#
 natron:
   branch: 2.4
   release:
@@ -8,6 +13,12 @@ natron:
       base: 'https://github.com/NatronGitHub/Natron/releases/'
       tag: 'tag/v'
       download: 'download/v'
+
+# General
+title: 'Natron'
+description: 'Open Source Compositing Software For VFX and Motion Graphics'
+#docs: 'https://natron.readthedocs.io'
+#demos: 'https://sourceforge.net/projects/natron/files/Examples'
 
 # Downloads
 downloads:
@@ -67,22 +78,23 @@ sourcecode:
   title: 'Sources'
   description: 'Source code for Natron and plug-ins.'
   icon: 'bx-package'
+  url: 'https://github.com/NatronGitHub/'
   items:
     natron:
       title: 'Natron'
-      url: 'https://github.com/NatronGitHub/Natron'
+      url: 'Natron'
     openfx_io:
       title: 'OpenFX IO'
-      url: 'https://github.com/NatronGitHub/openfx-io'
+      url: 'openfx-io'
     openfx_misc:
       title: 'OpenFX Misc'
-      url: 'https://github.com/NatronGitHub/openfx-misc'
+      url: 'openfx-misc'
     openfx_arena:
       title: 'OpenFX Arena'
-      url: 'https://github.com/NatronGitHub/openfx-arena'
+      url: 'openfx-arena'
     openfx_gmic:
       title: 'OpenFX GMIC'
-      url: 'https://github.com/NatronGitHub/openfx-gmic'
+      url: 'openfx-gmic'
 
 # Examples
 examples:
@@ -100,12 +112,6 @@ examples:
     gnuvolador:
       title: 'GNUVolador'
       url: 'Natron_2.3.12_GNUVolador.zip/download'
-
-# General
-title: 'Natron'
-description: 'Open Source Compositing Software For VFX and Motion Graphics'
-docs: 'https://natron.readthedocs.io'
-demos: 'https://sourceforge.net/projects/natron/files/Examples'
 
 # Home
 home:
@@ -157,17 +163,81 @@ home:
         paragraph2:
           content: 'Build, group, and save your own nodes to create custom tools and presets. Or install from our large selection of community-made <a href="https://github.com/NatronGitHub/natron-plugins" target="_blank" class="intext-link intext-link-glow">“pyplug”</a> nodes.'
 
-# Guide
-guide:
-  intro: 'guide/intro.html'
-  getting_started: 'guide/getstarted.html'
-  compositing: 'guide/compositing.html'
-  tutorials: 'guide/tutorials.html'
-  reference: '_group.html'
-  developer: 'devel/index.html'
+# Explore (header/footer menu)
+explore:
+  title: 'Explore'
+  items:
+    home:
+      title: 'Home'
+      url:
+        link: ''
+        external: false
+      header: false
+      footer: true
+    downloads:
+      title: 'Downloads'
+      url:
+        link: '#download'
+        external: false
+      header: true
+      footer: true
+    news:
+      title: 'News'
+      url:
+        link: 'news'
+        external: false
+      header: true
+      footer: true
+    features:
+      title: 'Features'
+      url:
+        link: '#features'
+        external: false
+      header: true
+      footer: true
+    community:
+      title: 'Community'
+      url:
+        link: '#community'
+        external: false
+      header: true
+      footer: true
+    documentation:
+      title: 'Documentation'
+      url:
+        link: 'https://natron.readthedocs.io'
+        external: true
+      header: false
+      footer: true
 
-# Community
-# twitter: https://twitter.com/natronvfx (unmaintained)
+# Learn (footer)
+learn:
+  title: 'Learn'
+  url: 'https://natron.readthedocs.io'
+  items:
+    intro:
+      title: 'What is compositing?'
+      url: 'guide/intro.html'
+    getting_started:
+      title: 'Getting Started'
+      url: 'guide/getstarted.html'
+    compositing:
+      title: 'Compositing'
+      url: 'guide/compositing.html'
+    tutorials:
+      title: 'Tutorials'
+      url: 'guide/tutorials.html'
+    reference:
+      title: 'Reference Guide'
+      url: '_group.html'
+    developer:
+      title: 'Developers Guide'
+      url: 'devel/index.html'
+
+# Community (home/footer)
+#
+# https://twitter.com/natronvfx (unmaintained)
+#
 community:
   title:
     home: 'Join the community!'
