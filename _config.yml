@@ -9,8 +9,20 @@ forum: https://discuss.pixls.us/c/software/natron
 github: https://github.com/NatronGitHub/Natron
 facebook: https://facebook.com/groups/NatronNation
 docs: https://natron.readthedocs.io
+demos: https://sourceforge.net/projects/natron/files/Examples
+
+# Guide
+guide:
+  intro: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/intro.html'
+  getting_started: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/getstarted.html'
+  compositing: 'https://natron.readthedocs.io/en/rb-__BRANCH__/guide/compositing.html'
+  tutorials: https://natron.readthedocs.io/en/rb-__BRANCH__/guide/tutorials.html
+  reference: 'https://natron.readthedocs.io/en/rb-__BRANCH__/_group.html'
+  developer: 'https://natron.readthedocs.io/en/rb-__BRANCH__/devel/index.html'
 
 # Natron
+natron:
+  branch: 2.4
 
 # Build settings
 sass:
