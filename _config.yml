@@ -62,6 +62,45 @@ downloads:
           url: ''
           suffix: '-OSX-Universal.dmg'
 
+# Sources
+sourcecode:
+  title: 'Sources'
+  description: 'Source code for Natron and plug-ins.'
+  icon: 'bx-package'
+  items:
+    natron:
+      title: 'Natron'
+      url: 'https://github.com/NatronGitHub/Natron'
+    openfx_io:
+      title: 'OpenFX IO'
+      url: 'https://github.com/NatronGitHub/openfx-io'
+    openfx_misc:
+      title: 'OpenFX Misc'
+      url: 'https://github.com/NatronGitHub/openfx-misc'
+    openfx_arena:
+      title: 'OpenFX Arena'
+      url: 'https://github.com/NatronGitHub/openfx-arena'
+    openfx_gmic:
+      title: 'OpenFX GMIC'
+      url: 'https://github.com/NatronGitHub/openfx-gmic'
+
+# Examples
+examples:
+  title: 'Examples'
+  description: 'Natron example projects.'
+  icon: 'bx-image'
+  url: 'https://sourceforge.net/projects/natron/files/Examples/'
+  items:
+    spaceship:
+      title: 'Spaceship'
+      url: 'Natron_2.3.12_Spaceship.zip/download'
+    baymax:
+      title: 'BayMax'
+      url: 'Natron_2.3.12_BayMax.zip/download'
+    gnuvolador:
+      title: 'GNUVolador'
+      url: 'Natron_2.3.12_GNUVolador.zip/download'
+
 # General
 title: 'Natron'
 description: 'Open Source Compositing Software For VFX and Motion Graphics'

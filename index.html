@@ -79,6 +79,32 @@ title: Natron
         </div>
       </div>
       {% endfor %}
+      <div class="index-downloads-os">
+        <div>
+          <h3 class="h3"><i class='bx {{site.sourcecode.icon}}'></i>{{site.sourcecode.title}}</h3>
+        </div>
+        <div>
+          <p class="p-small">{{site.sourcecode.description}}</p>
+        </div>
+        <div class="index-downloads-os-links">
+          {% for item in site.sourcecode.items %}
+          <a href="{{item[1].url}}" target="_blank" class="p-small intext-link intext-link-glow">{{item[1].title}}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="index-downloads-os">
+        <div>
+          <h3 class="h3"><i class='bx {{site.examples.icon}}'></i>{{site.examples.title}}</h3>
+        </div>
+        <div>
+          <p class="p-small">{{site.examples.description}}</p>
+        </div>
+        <div class="index-downloads-os-links">
+          {% for item in site.examples.items %}
+          <a href="{{site.examples.url}}{{item[1].url}}" target="_blank" class="p-small intext-link intext-link-glow">{{item[1].title}}</a>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
 </section>
