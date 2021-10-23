@@ -65,83 +65,33 @@ title: Natron
     <div class="index-downloads-titlecontainer">
       <h2 class="h2 center-text">Download Natron</h2>
       <p class="p-body center-text">
-        Latest version: <a href="{{site.natron.release.url.tag}}{{site.natron.release.version}}" target="_blank" class="intext-link intext-link-glow">{{site.natron.release.version}}</a> ({{site.natron.release.date}})
-      </p>
-      <p class="p-small center-text">
-        <a href="https://github.com/NatronGitHub/Natron#requirements" target="_blank" class="intext-link intext-link-glow">System requirements</a>
+        Latest version: <a href="{{site.natron.release.url.base}}{{site.natron.release.url.tag}}{{site.natron.release.version}}" target="_blank" class="intext-link intext-link-glow">{{site.natron.release.version}}</a> ({{site.natron.release.date}})
       </p>
     </div>
     <div class="index-downloads-oscontainer">
+      {% for os in site.downloads.items %}
       <div class="index-downloads-os">
         <div>
-          <h3 class="h3"><i class='bx bxl-apple'></i>macOS</h3>
+          <h3 class="h3"><i class='bx {{os[1].icon}}'></i>{{os[1].title}}</h3>
         </div>
         <div>
-          <p class="p-small">
-            Supports from Snow Leopard up to the latest version of macOS running on Intel hardware.
-          </p>
+          <p class="p-small">{{os[1].description}}</p>
         </div>
         <div class="index-downloads-os-links">
-          {% if site.natron.release.macos.v11 %}
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.macos.v11}}" class="p-small intext-link intext-link-glow">
-            Big Sur and later
+          {% for version in os[1].versions %}
+          {% if version[1].suffix == '' %}
+          <a href="{{version[1].url}}" target="_blank" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
+          </a>
+          {% else %}
+          <a href="{{site.natron.release.url.base}}{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{version[1].suffix}}" class="p-small intext-link intext-link-glow">
+            {{version[1].title}}
           </a>
           {% endif %}
-          {% if site.natron.release.macos.v1015 %}
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.macos.v1015}}" class="p-small intext-link intext-link-glow">
-            Catalina
-          </a>
-          {% endif %}
-          {% if site.natron.release.macos.v109 %}
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.macos.v109}}" class="p-small intext-link intext-link-glow">
-            Mavericks, Yosemite, El Capitan, (High) Sierra, Mojave
-          </a>
-          {% endif %}
-          {% if site.natron.release.macos.v106 %}
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.macos.v106}}" class="p-small intext-link intext-link-glow">
-            Snow Leopard, (Mountain) Lion
-          </a>
-          {% endif %}
+          {% endfor %}
         </div>
       </div>
-      <div class="index-downloads-os">
-        <div>
-          <h3 class="h3"><i class='bx bxl-windows'></i>Windows</h3>
-        </div>
-        <div>
-          <p class="p-small">
-            Supports Windows 8.1/10/11 x64.
-          </p>
-        </div>
-        <div class="index-downloads-os-links">
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.windows}}" class="p-small intext-link intext-link-glow">
-            Installer & Portable
-          </a>
-        </div>
-      </div>
-      <div class="index-downloads-os">
-        <div>
-          <h3 class="h3"><i class='bx bxl-tux'></i>GNU/Linux</h3>
-        </div>
-        <div>
-          <p class="p-small">
-            Supports any x86_64 distribution with X11, glibc 2.17+ and libgcc 4.8+.
-          </p>
-        </div>
-        <div class="index-downloads-os-links">
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.linux.installer}}" class="p-small intext-link intext-link-glow">
-            Installer
-          </a>
-          <a href="{{site.natron.release.url.download}}{{site.natron.release.version}}/Natron-{{site.natron.release.version}}{{site.natron.release.linux.installer}}" class="p-small intext-link intext-link-glow">
-            Portable
-          </a>
-          {% if site.natron.release.linux.flatpak %}
-          <a href="{{site.natron.release.linux.flatpak}}" target="_blank" class="p-small intext-link intext-link-glow">
-            Flatpak
-          </a>
-          {% endif %}
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

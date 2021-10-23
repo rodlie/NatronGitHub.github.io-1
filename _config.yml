@@ -5,18 +5,60 @@ natron:
     version: 2.4.0
     date: '2021-04-20'
     url:
-      tag: 'https://github.com/NatronGitHub/Natron/releases/tag/v'
-      download: 'https://github.com/NatronGitHub/Natron/releases/download/v'
+      base: 'https://github.com/NatronGitHub/Natron/releases/'
+      tag: 'tag/v'
+      download: 'download/v'
+
+# Downloads
+downloads:
+  items:
+    windows:
+      title: 'Windows'
+      description: 'Supports Windows 8.1/10/11 x64.'
+      icon: 'bxl-windows'
+      versions:
+        installer:
+          title: 'Installer & Portable'
+          url: ''
+          suffix: '-Windows-x86_64.zip'
     linux:
-      installer: '-Linux-x86_64.tgz'
-      portable: '-Linux-x86_64-no-installer.tar.xz'
-      flatpak: 'https://flathub.org/apps/details/fr.natron.Natron'
-    windows: '-Windows-x86_64.zip'
+      title: 'GNU/Linux'
+      description: 'Supports any x86_64 distribution with X11, glibc 2.17+ and libgcc 4.8+.'
+      icon: 'bxl-tux'
+      versions:
+        installer:
+          title: 'Installer'
+          url: ''
+          suffix: '-Linux-x86_64.tgz'
+        portable:
+          title: 'Portable'
+          url: ''
+          suffix: '-Linux-x86_64-no-installer.tar.xz'
+        flatpak:
+          title: 'Flatpak'
+          url: 'https://flathub.org/apps/details/fr.natron.Natron'
+          suffix: ''
     macos:
-      v11: '-macOS11-x86_64.dmg'
-      v1015: '-macOS1015-x86_64.dmg'
-      v109: '-OSX109-x86_64.dmg'
-      v106: '-OSX-Universal.dmg'
+      title: 'macOS'
+      description: 'Supports from Snow Leopard up to the latest version of macOS running on Intel hardware.'
+      icon: 'bxl-apple'
+      versions:
+        v11:
+          title: 'Big Sur and later'
+          url: ''
+          suffix: '-macOS11-x86_64.dmg'
+        v1015:
+          title: 'Catalina'
+          url: ''
+          suffix: '-macOS1015-x86_64.dmg'
+        v109:
+          title: 'Mavericks, Yosemite, El Capitan, (High) Sierra, Mojave'
+          url: ''
+          suffix: '-OSX109-x86_64.dmg'
+        v106:
+          title: 'Snow Leopard, (Mountain) Lion'
+          url: ''
+          suffix: '-OSX-Universal.dmg'
 
 # General
 title: 'Natron'
