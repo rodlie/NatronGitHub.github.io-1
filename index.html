@@ -143,3 +143,26 @@ title: Natron
     </div>
   </div>
 </section>
+<section class="stdsection" id="news">
+  <div class="section-container">
+    <div class="index-community-titlecontainer">
+      <h2 class="h2 center-text">Latest News</h2>
+    </div>
+    <div class="index-community-cardgrid">
+    {% for post in site.posts limit: 12 %}
+    <div class="index-community-cardcontainer">
+      <a href="{{post.url}}" target="_blank" class="index-card">
+        <div class="index-card-icon"><i class='bx bx-news'></i></div>
+        <div class="index-card-text">
+          <div>
+            <h4 class="h4">{{post.title}}</h4>
+            <p class="p-small">{{post.date | date_to_string}}</p>
+            <p class="p-small">{{post.excerpt}}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

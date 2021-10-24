@@ -1,7 +1,7 @@
 # Natron
 #
 # Update 'branch', 'version' and 'date' on new release
-# also make a new post in '_posts' named 'YYYY-MM-DD-Natron-X.Y.Z.md' (just copy the content of the GitHub release notes)
+# also make a new post in '_posts' named 'YYYY-MM-DD-Natron-X-Y-Z.md' (just copy the content of the GitHub release notes)
 # and update 'LATEST_VERSION.txt'
 #
 natron:
@@ -204,7 +204,7 @@ explore:
     news:
       title: 'News'
       url:
-        link: 'news'
+        link: '#news'
         external: false
       header: true
       footer: true
@@ -302,11 +302,11 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
-collections_dir: _collections
-collections:
-  features:
-    output: true
-    permalink: /features/:path/
+#collections_dir: _collections
+#collections:
+#  features:
+#    output: true
+#    permalink: /features/:path/
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
